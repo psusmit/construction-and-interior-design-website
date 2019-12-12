@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+        font-family: "Poppins", sans-serif
+    }
+    
+    body {
+        font-size: 16px;
+    }
+    
+    .w3-half img {
+        margin-bottom: -6px;
+        margin-top: 16px;
+        opacity: 0.8;
+        cursor: pointer
+    }
+    
+    .w3-half img:hover {
+        opacity: 1
+    }
+    
+    .fa {
+        padding: 15px;
+        font-size: 25px;
+        width: 50px;
+        text-align: center;
+        text-decoration: none;
+        margin: 5px 2px;
+    }
+    
+    .fa:hover {
+        opacity: 0.7;
+    }
+    
+    .fa-facebook {
+        background: #3B5998;
+        color: white;
+    }
+    
+    .fa-instagram {
+        background: linear-gradient(to top left, #ff0000 0%, #ff3399 100%);
+        color: white;
+    }
+    
+    .container {
+        position: relative;
+        max-width: 800px;
+        /* Maximum width */
+        margin: 0 auto;
+        /* Center it */
+    }
+    
+    .container .content {
+        text-align: center;
+        position: relative;
+        /* Position the background text */
+        bottom: -5;
+        /* At the bottom. Use top:0 to append it to the top */
+        background: rgb(0, 0, 0);
+        /* Fallback color */
+        background: rgba(0, 0, 0, 0.5);
+        /* Black background with 0.5 opacity */
+        color: red;
+        /* Grey text */
+        width: 100%;
+        /* Full width */
+        padding: 20px;
+        /* Some padding */
+    }
+    
+    .int_img {
+        width: 100%;
+        height: auto;
+    }
+</style>
+
+<body>
+
+    <!-- Sidebar/menu -->
+    <nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+        <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+        <div class="w3-container">
+            <h3 class="w3-padding-64"><b>TECHNO<br>ART<br><sub>We believe in Transparency</sub></b></h3>
+        </div>
+        <div class="w3-bar-block">
+            <!-- <a href="firstPage.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Back</a> -->
+            <a href="#showcase" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Showcase</a>
+            <a href="#services" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Services</a>
+            <!-- <a href="#designers" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Designers</a> -->
+            <!-- <a href="#packages" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Packages</a> -->
+            <a href="aboutUs.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">About Us</a>
+
+            <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contact</a>
+
+            <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Back</a>
+
+        </div>
+    </nav>
+
+    <!-- Top menu on small screens -->
+    <header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+        <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">&#9776;</a>
+        <span>Company Name</span>
+    </header>
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+    <div class="container">
+        <div class="int_img">
+            <img src="E:/mrinmayiTai/civ/Civil.jpg" alt="" srcset="">
+        </div>
+
+    </div>
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+        <!-- Header -->
+        <div class="w3-container" style="margin-top:80px" id="showcase">
+
+            <h1 class="w3-xxxlarge w3-text-red"><b>Showcase.</b></h1>
+            <hr style="width:50px;border:5px solid red" class="w3-round">
+        </div>
+
+        <!-- Photo grid (modal) -->
+        <div class="w3-row-padding">
+            <div class="w3-half">
+                <img src="civ/1.jpg" onclick="onClick(this)">
+                <!-- <img src="civ/2.jpg" onclick="onClick(this)"> -->
+                <img src="civ/3.jpg" onclick="onClick(this)">
+                <!-- <img src="civ/4.jpg" onclick="onClick(this)"> -->
+
+            </div>
+
+            <div class="w3-half">
+                <!-- <img src="civ/5.jpg" onclick="onClick(this)"> -->
+                <img src="civ/6.jpg" onclick="onClick(this)">
+                <img src="civ/7.jpg" onclick="onClick(this)">
+                <!-- <img src="civ/9.jpg" onclick="onClick(this)"> -->
+
+                <!-- <img src="civ/8.jpg" onclick="onClick(this)"> -->
+
+
+            </div>
+        </div>
+
+        <!-- Modal for full size images on click-->
+        <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+            <span class="w3-button w3-black w3-xxlarge w3-display-topright">&times;</span>
+            <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+                <img id="img01" class="w3-image">
+                <p id="caption"></p>
+            </div>
+        </div>
+
+        <!-- Services -->
+        <div class="w3-container" id="services" style="margin-top:75px">
+            <h1 class="w3-xxxlarge w3-text-red"><b>Services.</b></h1>
+            <hr style="width:50px;border:5px solid red" class="w3-round">
+            <p>We are giving a civil work service that focus on best of your reidential and commercial design needs.</p>
+            <ul style="list-style-type:circle;">
+                <li>Reflected ceiling</li>
+                <!-- <li>Internal and External</li> -->
+                <li>Painting</li>
+                <li>Plastering</li>
+                <li>Flooring</li>
+                <li>Plumbing</li>
+                <li>Carpentry</li>
+                <li>Electrical</li>
+                <li>Metal works and Repairs</li>
+                <li>Cement concrete work</li>
+                <li>Bunglow Construction</li>
+                <li>Shade erection</li>
+
+            </ul>
+        </div>
+
+        <!-- Designers -->
+
+
+        <!-- Contact -->
+        <div class="w3-container" id="contact" style="margin-top:75px">
+            <h1 class="w3-xxxlarge w3-text-red"><b>Contact.</b></h1>
+            <hr style="width:50px;border:5px solid red" class="w3-round">
+            <p>Do you want us to style your home? :) We love meeting new people!</p>
+            <p>Office number: 9920107099, 9920329105</p>
+            <p>Email_id: technoartg13@gmail.com</p>
+            <a href="" class="fa fa-facebook"></a>
+            <a href="" class="fa fa-instagram"></a>
+            <!-- <form action="/action_page.php" target="_blank">
+                <div class="w3-section">
+                    <label>Name</label>
+                    <input class="w3-input w3-border" type="text" name="Name" required>
+                </div>
+                <div class="w3-section">
+                    <label>Email</label>
+                    <input class="w3-input w3-border" type="text" name="Email" required>
+                </div>
+                <div class="w3-section">
+                    <label>Message</label>
+                    <input class="w3-input w3-border" type="text" name="Message" required>
+                </div>
+                <button type="submit" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom">Send Message</button>
+            </form> -->
+        </div>
+
+        <!-- End page content -->
+    </div>
+
+    <!-- W3.CSS Container -->
+    <div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px">
+
+        <p class="w3-right">Powered by EiZo</p>
+    </div>
+
+    <script>
+        document.addEventListener("contextmenu", function(e) {
+            e.preventDefault();
+        }, false);
+        // Script to open and close sidebar
+        function w3_open() {
+            document.getElementById("mySidebar").style.display = "block";
+            document.getElementById("myOverlay").style.display = "block";
+        }
+
+        function w3_close() {
+            document.getElementById("mySidebar").style.display = "none";
+            document.getElementById("myOverlay").style.display = "none";
+        }
+
+        // Modal Image Gallery
+        function onClick(element) {
+            document.getElementById("img01").src = element.src;
+            document.getElementById("modal01").style.display = "block";
+            var captionText = document.getElementById("caption");
+            captionText.innerHTML = element.alt;
+        }
+    </script>
+
+</body>
+
+</html>
